@@ -1,0 +1,125 @@
+<!DOCTYPE hrml>
+<html>
+    <head>
+        <title>menu deslisante</title>
+       
+        
+        <style>
+ /*estilo do nosso link*/
+a{
+  position: absolute;
+  z-index: 10;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.4em;
+  padding-left: 22px;
+  display: block;
+  width: 160px;
+  height: 40px;
+  text-decoration: none;
+}
+ 
+/*ao passar o mouse sobre nosso link*/
+a:hover{
+  color: yellowgreen;
+  border-right: 2px solid #fff;
+}
+.menu{
+  position: relative;
+  list-style: none;
+  width: 182px;
+  padding: 40px 0;
+  margin: auto;
+}
+.menu:before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  background: #5b9780;
+  height: 100%;
+  width: 182px;
+  margin-top: -40px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.menu li{
+  height: 40px;
+  width: 100%;
+}
+.menu li .submenu{
+  width: 152px;
+  height: 220px;
+  padding: 15px;
+  margin-top: 16px;
+  background: yellowgreen;
+  overflow: hidden;
+  color: #fff;
+  text-align: right;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  opacity: 0;
+ 
+  -webkit-transition: 1s left,1s width,1s opacity;
+  transition: 1s left,1s width,1s opacity;
+ 
+  border-top-right-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+ 
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+}          
+            
+ .menu li:hover .submenu{
+  left: 182px;
+  opacity: 1;
+  width: 276px;
+}           
+            
+        </style>   
+    </head>
+    
+    
+    
+    
+    
+    <body>
+        <ul class="menu">
+      <li>
+        <a href="../PROJECTOS PRONTOS/P">Home</a>
+        <div class="submenu">
+          <h1>HOME</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+        </div>
+      </li>
+      <li>
+        <a href="">Sobre</a>
+        <div class="submenu">
+          <h1>SOBRE</h1>
+          <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </li>
+      <li>
+        <a href="">Notícias</a>
+        <div class="submenu">
+          <h1>NOTÍCIAS</h1>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </li>
+      <li>
+        <a href="">Esporte</a>
+        <div class="submenu">
+          <h1>ESPORTE</h1>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa id est laborum.</p>
+        </div>
+      </li>
+      <li>
+        <a href="">Contato</a>
+        <div class="submenu">
+          <h1>CONTATO</h1>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa id est laborum.</p>
+        </div>
+      </li>
+    </ul>
+    </body>
+</html>
